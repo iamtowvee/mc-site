@@ -151,7 +151,7 @@ a:active {
 .btn {
     color: var(--text-primary);
     background-color: rgba(0, 0, 0, 0.2);
-    border: 2px solid var(--text-primary);
+    border: 1px solid var(--text-primary);
     border-radius: 6px;
     width: max-content;
     padding: 2px 10px;
@@ -186,8 +186,14 @@ section {
 }
 
 /* ============================
-    HEADER & FOOTER
+    HEADER & FOOTER & BY
    ============================ */
+
+.by_with_love {
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
 
 header {
     position: fixed;
@@ -203,10 +209,10 @@ header {
 
 .footer {
     position: relative;
-    width: 100vw;
+    width: 100%;
     margin-top: 10vh;
     padding: 2rem 1rem;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--bg-footer);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0;
@@ -215,8 +221,18 @@ header {
 }
 
 .footer.visible {
-    opacity: 1;
-    transform: translateY(0);
+    animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .footer-content {
@@ -235,7 +251,7 @@ header {
 }
 
 .footer-links a {
-    color: var(--text-primary);
+    color: var(--text-light);
     text-decoration: none;
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -247,7 +263,7 @@ header {
 }
 
 .footer-license {
-    color: var(--text-primary);
+    color: var(--text-light);
     opacity: 0.5;
     font-size: 0.8rem;
 }

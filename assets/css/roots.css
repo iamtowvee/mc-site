@@ -1,15 +1,16 @@
 :root {
-    --bg-primary: #FEFDDF;
-    --bg-ui-primary: #A7A8B0;
+    --bg-primary: #F0F2F5;
+    --bg-ui-primary: #E2E4E9;
     --accent-primary: #E87F24;
     --accent-secondary: #FFC81E;
     --accent-tr: #3D5A80;
-    --text-primary: #0A0A0A;
-    --text-secondary: #8A8F8C;
+    --text-primary: #1A1A1A;
+    --text-secondary: #6C757D;
     --text-light: #FEFEFE;
-    --gl-primary: rgba(255, 255, 255, 0.2);
-    --gl-secondary: rgba(255, 255, 255, 0.3);
-    --sd-primary: rgba(0, 0, 0, 0.3);
+    --gl-primary: rgba(0, 0, 0, 0.08);
+    --gl-secondary: rgba(0, 0, 0, 0.12);
+    --sd-primary: rgba(0, 0, 0, 0.15);
+    --bg-footer: rgba(0, 0, 0, 1);
 }
 
 :root[data-theme="dark"] {
@@ -21,4 +22,8 @@
     --text-primary: #FEFDF2;
     --text-secondary: #B9B9CE;
     --text-light: #FFFFFF;
+    --gl-primary: rgba(255, 255, 255, 0.2);
+    --gl-secondary: rgba(255, 255, 255, 0.3);
+    --sd-primary: rgba(0, 0, 0, 0.3);
+    --bg-footer: rgba(0, 0, 0, 0.5);
 }

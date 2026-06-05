@@ -3,18 +3,18 @@
     if (!footer) return;
     
     function checkFooterVisibility() {
-        const scrollBottom = window.scrollY + window.innerHeight;
-        const pageHeight = document.documentElement.scrollHeight;
+        const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
         
-        // Когда до конца страницы осталось 50px
-        if (scrollBottom + 50 >= pageHeight) {
+        if (scrollTop + windowHeight >= docHeight - 50) {
             footer.classList.add('visible');
-        } else {
-            footer.classList.remove('visible');
+            document.body.removeEventListener('scroll', checkFooterVisibility);
+            window.removeEventListener('resize', checkFooterVisibility);
         }
     }
     
-    window.addEventListener('scroll', checkFooterVisibility);
+    document.body.addEventListener('scroll', checkFooterVisibility);
     window.addEventListener('resize', checkFooterVisibility);
     checkFooterVisibility();
 })();
