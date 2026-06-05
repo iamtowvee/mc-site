@@ -1,0 +1,21 @@
+:root {
+    --bg-primary: #FEFDDF;
+    --bg-ui-primary: #A7A8B0;
+    --accent-primary: #E87F24;
+    --accent-secondary: #FFC81E;
+    --accent-tr: #74A6CB;
+    --text-primary: #0A0A0A;
+    --text-secondary: #8A8F8C;
+    --text-light: #FEFEFE;
+}
+
+:root[data-theme="dark"] {
+    --bg-primary: #1E104E;
+    --bg-ui-primary: #452E5A;
+    --accent-primary: #FF653F;
+    --accent-secondary: #FFC85C;
+    --accent-tr: #3D5A80;
+    --text-primary: #FEFDF2;
+    --text-secondary: #B9B9CE;
+    --text-light: #FFFFFF;
+}

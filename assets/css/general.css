@@ -1,0 +1,190 @@
+* {
+    font-family: 'Comfortaa', 'Exo', Arial, Monospace;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: var(--bg-primary);
+}
+
+.content {
+    padding-top: 8vh;
+    margin: 0.5vw;
+    transition: opacity 0.8s ease;
+}
+
+/* ============================
+    TEXTS
+   ============================ */
+
+h1 {
+    text-align: center;
+    color: var(--accent-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    text-align: center;
+    color: var(--accent-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h4 {
+    text-align: center;
+    color: var(--accent-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h5 {
+    text-align: center;
+    color: var(--accent-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+h6 {
+    text-align: center;
+    color: var(--accent-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+p {
+    display: inline;
+    text-align: justify;
+    color: var(--text-primary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* ============================
+    BUTTONS
+   ============================ */
+
+a {
+    display: inline;
+    text-align: justify;
+    color: var(--accent-tr);
+    line-height: 1.6;
+    text-decoration: underline;
+    text-shadow: none;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    opacity: 0.8;
+}
+
+.btn {
+    color: var(--text-primary);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--text-primary);
+    border-radius: 6px;
+    width: max-content;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--accent-tr);
+    border-color: var(--accent-tr);
+}
+
+.btn:active {
+    animation: click 0.3s ease-in-out;
+}
+
+@keyframes click {
+    0% { color: var(--text-primary); border-color: var(--text-primary); }
+    40% { color: var(--text-light); border-color: var(--text-light); }
+    100% { color: var(--text-primary); border-color: var(--text-primary); }
+}
+
+/* ============================
+    HEADER
+   ============================ */
+
+header {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* ============================
+    LOADER
+   ============================ */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 9999;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loader-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #666, #fff, #666);
+    transition: width 0.1s linear;
+}
+
+.loader.hide {
+    transform: translateY(100%);
+}
+
+.loader.hide .loader-progress {
+    display: none;
+}
