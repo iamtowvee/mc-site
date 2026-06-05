@@ -104,6 +104,7 @@ h6 {
 }
 
 p {
+    vertical-align: middle;
     display: inline;
     text-align: justify;
     color: var(--text-primary);
@@ -275,6 +276,7 @@ section {
         font-size: 1.1rem;
     }
 }
+
 /* ============================
     HEADER & FOOTER & BY
    ============================ */
@@ -338,6 +340,12 @@ header {
 .footer-links {
     display: flex;
     gap: 1.5rem;
+}
+
+.footer-links .txt {
+    color: var(--text-light);
+    text-decoration: none;
+    opacity: 0.7;
 }
 
 .footer-links a {
@@ -525,5 +533,92 @@ header {
     
     .nav a {
         font-size: 1.2rem;
+    }
+}
+
+/* ============================
+    MODAL WINDOWS
+   ============================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--gl-primary);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid var(--gl-secondary);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-primary);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-content h3 {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.modal-content p {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.modal-btn {
+    margin-top: 0.5rem;
+}
+
+.modal-trigger {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1.5rem;
+        width: 85%;
     }
 }

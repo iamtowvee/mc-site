@@ -64,12 +64,40 @@
                         <div class="card-content">
                             <h3>Название мастер-класса</h3>
                             <p>Короткое описание того, что будет на мастер-классе</p>
+                            <button class="btn card-btn" style="margin-bottom: 0.5vw;">Подробнее</button>
                             <button class="btn card-btn">Записаться</button>
                         </div>
                     </div>
                     
                     <div class="card">
                         <img src="image3.jpg" alt="МК Название">
+                        <div class="card-content">
+                            <h3>Название мастер-класса</h3>
+                            <p>Короткое описание того, что будет на мастер-классе</p>
+                            <button class="btn card-btn">Записаться</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="image4.jpg" alt="МК Название">
+                        <div class="card-content">
+                            <h3>Название мастер-класса</h3>
+                            <p>Короткое описание того, что будет на мастер-классе</p>
+                            <button class="btn card-btn">Записаться</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="image4.jpg" alt="МК Название">
+                        <div class="card-content">
+                            <h3>Название мастер-класса</h3>
+                            <p>Короткое описание того, что будет на мастер-классе</p>
+                            <button class="btn card-btn">Записаться</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="image4.jpg" alt="МК Название">
                         <div class="card-content">
                             <h3>Название мастер-класса</h3>
                             <p>Короткое описание того, что будет на мастер-классе</p>
@@ -118,6 +146,21 @@
                 <button class="btn" id="switchThemeBtn">h</button>
             </section>
         </div>
+
+        <div id="licenses" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h3>Лицензии</h3>
+                <p>Alumni Sans SC &sdot; Alexander Lubyanov, Vika Usmanova</p>
+                <p>Bebas Neue &sdot; Ryoichi Tsunekawa (Flat-it)</p>
+                <p>Black Ops One &sdot; James Grieshaber (Typomancer)</p>
+                <p>Caveat &sdot; Pablo Impallari</p>
+                <p>Comfortaa &sdot; Johan Aakerlund (Cyreal)</p>
+                <p>Electrolize &sdot; Ricardo Villagrán, Mariela Monsalve (TipoType)</p>
+                <p>Exo &sdot; Natanael Gama (NDISCOVER)</p>
+                <button class="btn modal-btn">Действие</button>
+            </div>
+        </div>
         
         <footer class="footer">
             <div class="footer-content">
@@ -127,18 +170,25 @@
                     <a href="#">VK</a>
                 </div>
                 <div class="footer-license">
-                    © 2026 Татьяна
+                    <p class="modal-trigger" data-modal="licenses">Лицензии</p>
                 </div>
             </div>
             <br>
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="#">GitHub</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Discord</a>
+                    <p>Заголовок</p>
                 </div>
-                <div class="footer-license">
-                    © 2026 тут лицензия, если надо
+            </div>
+            <br>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <p class="txt">ИП xxxx</p>
+                </div>
+            </div>
+            <br>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <p class="txt">ИНН xxxx</p>
                 </div>
             </div>
             <br>
@@ -150,6 +200,7 @@
         </footer>
 
         <script src="../../assets/js/themes.js"></script>
+        <script src="../../assets/js/modal.js"></script>
         <script src="../../assets/js/scroll.js"></script>
         <script src="../../assets/js/loader.js"></script>
         <script src="../../assets/js/footer.js"></script>

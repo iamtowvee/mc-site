@@ -12,7 +12,6 @@
         }
     }
     
-    // Быстро доходим до 95%
     interval = setInterval(() => {
         if (progress < 95) {
             progress += Math.random() * 8;
@@ -22,11 +21,9 @@
         }
     }, 100);
     
-    // Ждём реальную загрузку
     function finishLoading() {
         if (interval) clearInterval(interval);
         
-        // Добиваем до 100%
         let finalProgress = 95;
         const finalInterval = setInterval(() => {
             if (finalProgress < 100) {
@@ -34,9 +31,7 @@
                 if (progressBar) progressBar.style.width = finalProgress + '%';
             } else {
                 clearInterval(finalInterval);
-                // Падаем вниз
                 if (loader) loader.classList.add('hide');
-                // Удаляем лоадер после анимации
                 setTimeout(() => {
                     if (loader && loader.parentNode) loader.remove();
                 }, 800);
@@ -44,7 +39,6 @@
         }, 15);
     }
     
-    // Когда всё загрузилось
     if (document.readyState === 'complete') {
         finishLoading();
     } else {
