@@ -10,6 +10,7 @@ html {
 
 body {
     overflow-y: auto !important;
+    scroll-padding-top: 10vh;
     overflow-x: hidden;
     height: 100vh;
     width: 100%;
