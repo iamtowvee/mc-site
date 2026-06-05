@@ -1,17 +1,37 @@
 * {
     font-family: 'Comfortaa', 'Exo', Arial, Monospace;
-    overflow-x: hidden;
     margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: hidden !important;
 }
 
 body {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
     background: var(--bg-primary);
 }
 
+img, video, iframe, pre, code {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 .content {
     padding-top: 8vh;
-    margin: 0.5vw;
     transition: opacity 0.8s ease;
 }
 
@@ -93,6 +113,17 @@ p {
     font-weight: 400;
 }
 
+.mut {
+    display: inline;
+    text-align: justify;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 /* ============================
     BUTTONS
    ============================ */
@@ -105,7 +136,7 @@ a {
     text-decoration: underline;
     text-shadow: none;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -143,17 +174,93 @@ a:active {
 }
 
 /* ============================
-    HEADER
+    SECTIONS
+   ============================ */
+
+section {
+    border-top: 1px solid var(--gl-secondary);
+    border-bottom: 1px solid var(--gl-secondary);
+    background: var(--gl-primary);
+    padding: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+/* ============================
+    HEADER & FOOTER
    ============================ */
 
 header {
     position: fixed;
     width: 100%;
+    right: 0;
+    left: 0;
     height: fit-content;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--gl-secondary);
+    box-shadow: 0 4px 30px var(--sd--primary);
+    background-color: var(--gl-primary);
     backdrop-filter: blur(10px);
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    margin-top: 10vh;
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-license {
+    color: var(--text-primary);
+    opacity: 0.5;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 748px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
 }
 
 /* ============================
@@ -187,4 +294,27 @@ header {
 
 .loader.hide .loader-progress {
     display: none;
+}
+
+/* ============================
+    CUSTOM SCROLLBAR
+   ============================ */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
 }
