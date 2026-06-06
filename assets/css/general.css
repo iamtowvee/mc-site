@@ -57,12 +57,6 @@ img, video, iframe, pre, code {
     transition: opacity 0.8s ease;
 }
 
-@media (max-width: 1024px) {
-    .content {
-        padding-top: 12vh;
-    }
-}
-
 /* ============================
     TEXTS
    ============================ */
@@ -245,8 +239,8 @@ section {
     border-top: 1px solid var(--gl-secondary);
     border-bottom: 1px solid var(--gl-secondary);
     background: var(--gl-primary);
-    padding: 0.5vw;
-    margin-bottom: 1vw;
+    padding: 1vw;
+    margin-bottom: 1vh;
 }
 
 /* ============================
@@ -570,12 +564,12 @@ header {
    ============================ */
 
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-primary);
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-nav);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
