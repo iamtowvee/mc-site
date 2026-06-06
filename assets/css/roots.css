@@ -27,3 +27,13 @@
     --sd-primary: rgba(0, 0, 0, 0.3);
     --bg-footer: rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 1024px) {
+    :root[data-theme="light"] .footer {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .footer {
+        background: var(--bg-footer);
+    }
+}

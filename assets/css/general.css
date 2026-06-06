@@ -31,9 +31,22 @@ img, video, iframe, pre, code {
     }
 }
 
+@media (max-width: 1024px) {
+    body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 .content {
     padding-top: 8vh;
     transition: opacity 0.8s ease;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        padding-top: 12vh;
+    }
 }
 
 /* ============================
@@ -258,7 +271,6 @@ section {
     text-align: center;
 }
 
-/* Телефоны */
 @media (max-width: 768px) {
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -275,6 +287,19 @@ section {
     
     .card-content h3 {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -368,17 +393,27 @@ header {
     font-size: 0.8rem;
 }
 
-@media (max-width: 748px) {
+@media (max-width: 1024px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+    
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
     
-    .footer-links {
+    .footer-links-row {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .footer-links-column {
+        align-items: center;
     }
 }
-
 /* ============================
     LOADER
    ============================ */
@@ -503,7 +538,7 @@ header {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .burger {
         display: flex;
     }
@@ -520,7 +555,6 @@ header {
         padding-top: 80px;
         transition: right 0.3s ease;
         z-index: 1000;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
     }
     
     .nav.active {
@@ -533,8 +567,13 @@ header {
         padding: 0 2rem;
     }
     
+    .nav ul li {
+        width: 100%;
+    }
+    
     .nav a {
         font-size: 1.2rem;
+        display: block;
     }
 }
 
