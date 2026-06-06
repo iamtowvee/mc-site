@@ -2,6 +2,19 @@
     font-family: 'Comfortaa', 'Exo', Arial, Monospace;
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+p, span, a, li, div, h1, h2, h3, h4, h5, h6, .footer-license, .footer-links, .footer-content, .modal-trigger, .txt, .ttl, .mut {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.container, .content, .footer, .header, .modal, .cards-section {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 html {
@@ -392,19 +405,23 @@ header {
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
     z-index: 51;
 }
 
 .footer-links {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.5rem;
     z-index: 79;
 }
 
@@ -441,6 +458,10 @@ header {
     opacity: 0.5;
     font-size: 0.8rem;
     z-index: 79;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 100%;
+    text-align: center;
 }
 
 .footer-license .ttl {
@@ -471,27 +492,46 @@ header {
     z-index: 80;
 }
 
+@media (max-width: 1600px) {
+    .footer {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
 @media (max-width: 1024px) {
     .footer {
         padding: 1.5rem 1rem;
+    }
+
+    .footer-license {
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+        padding: 0 0.5rem;
     }
     
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        padding: 0;
     }
     
-    .footer-links-row {
+    .footer-links {
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .footer-links-column {
-        align-items: center;
+        gap: 0.5rem 1rem;
     }
 }
+
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
 /* ============================
     LOADER
    ============================ */
