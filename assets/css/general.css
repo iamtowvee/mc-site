@@ -221,6 +221,7 @@ section {
     overflow: hidden;
     border: 1px solid var(--gl-secondary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 20;
 }
 
 .card:hover {
@@ -297,6 +298,7 @@ header {
     box-shadow: 0 4px 30px var(--sd--primary);
     background-color: var(--gl-primary);
     backdrop-filter: blur(10px);
+    z-index: 555;
 }
 
 .footer {
