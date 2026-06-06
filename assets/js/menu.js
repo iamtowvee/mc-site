@@ -10,8 +10,10 @@
         
         if (nav.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
+            burger.style.setProperty('--burger-color', '#FFFFFF');
         } else {
             document.body.style.overflow = '';
+            burger.style.setProperty('--burger-color', '');
         }
     });
     

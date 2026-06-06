@@ -10,6 +10,7 @@
     --gl-primary: rgba(0, 0, 0, 0.08);
     --gl-secondary: rgba(0, 0, 0, 0.12);
     --sd-primary: rgba(0, 0, 0, 0.15);
+    --bg-nav: rgba(0, 0, 0, 0.85);
     --bg-footer: rgba(0, 0, 0, 1);
 }
 
@@ -25,6 +26,7 @@
     --gl-primary: rgba(255, 255, 255, 0.2);
     --gl-secondary: rgba(255, 255, 255, 0.3);
     --sd-primary: rgba(0, 0, 0, 0.3);
+    --bg-nav: rgba(0, 0, 0, 0.85);
     --bg-footer: rgba(0, 0, 0, 0.5);
 }
 
