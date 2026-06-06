@@ -148,8 +148,36 @@
             </section>
         </div>
 
+        <div id="modal-narrow" class="modal">
+            <div class="modal-content modal-narrow">
+                <span class="modal-close">&times;</span>
+                <h3>Узкое окно</h3>
+                <p>Содержимое узкого модального окна. Подходит для небольших сообщений, форм и т.д.</p>
+                <button class="btn modal-btn">Закрыть</button>
+            </div>
+        </div>
+
+        <div id="modal-wide" class="modal">
+            <div class="modal-content modal-wide">
+                <span class="modal-close">&times;</span>
+                <h3>Широкое окно</h3>
+                <p>Содержимое широкого модального окна. Подходит для больших объёмов информации, галерей, таблиц и т.д.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <div style="flex: 1; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 12px;">
+                        <h4>Блок 1</h4>
+                        <p>Какой-то контент</p>
+                    </div>
+                    <div style="flex: 1; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 12px;">
+                        <h4>Блок 2</h4>
+                        <p>Какой-то контент</p>
+                    </div>
+                </div>
+                <button class="btn modal-btn" style="margin-top: 1rem;">Действие</button>
+            </div>
+        </div>
+
         <div id="licenses" class="modal">
-            <div class="modal-content">
+            <div class="modal-content modal-wide">
                 <span class="modal-close">&times;</span>
                 <h3>Лицензии</h3>
                 <p>Alumni Sans SC &sdot; Alexander Lubyanov, Vika Usmanova</p>
@@ -166,10 +194,13 @@
                 <p>Share Tech &sdot; Carrois Studio (исполнитель Ralph du Carrois)</p>
                 <p>Six Caps &sdot; Vernon Adams</p>
                 <p>Source Code Pro &sdot; Paul D. Hunt (Adobe)</p>
-                <p>Varela Round &sdot; Sonia Lellouche,Joe Prince (Varela Type)</p>
+                <p>Varela Round &sdot; Sonia Lellouche, Joe Prince (Varela Type)</p>
                 <button class="btn modal-btn">Действие</button>
             </div>
         </div>
+
+        <button class="btn modal-trigger" data-modal="modal-narrow">Узкое окно</button>
+        <button class="btn modal-trigger" data-modal="modal-wide">Широкое окно</button>
         
         <footer class="footer">
             <div class="footer-content">

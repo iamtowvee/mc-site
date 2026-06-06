@@ -12,6 +12,7 @@
     --sd-primary: rgba(0, 0, 0, 0.15);
     --bg-nav: rgba(0, 0, 0, 0.85);
     --bg-footer: rgba(0, 0, 0, 1);
+    --bg-modal: rgb(226, 228, 233, 0.9);
 }
 
 :root[data-theme="dark"] {
@@ -28,6 +29,7 @@
     --sd-primary: rgba(0, 0, 0, 0.3);
     --bg-nav: rgba(0, 0, 0, 0.85);
     --bg-footer: rgba(0, 0, 0, 0.5);
+    --bg-modal: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 1024px) {
