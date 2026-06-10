@@ -363,6 +363,7 @@ section {
     background: transparent;
     backdrop-filter: none;
     box-shadow: none;
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
