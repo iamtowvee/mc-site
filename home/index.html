@@ -46,7 +46,7 @@
         
         <div class="content">
             <section id="top">
-                <h1>Title</h1>
+                <h1>Арт-праздник</h1>
                 <p>gwhwhwh</p> <a>hi</a><br>
                 <button class="btn" id="switchThemeBtn">h</button>
             </section>
@@ -54,11 +54,33 @@
                 <h2>Мастер-классы</h2>
                 <div class="cards-grid">
                     <div class="card">
-                        <img src="../assets/icons/image1.png" alt="МК Название">
+                        <img src="../assets/icons/mks/preview/d41d8cd98f00b204/3.jpg" 
+                            alt="МК Аромасвечи" 
+                            class="gallery-trigger"
+                            data-gallery="d41d8cd98f00b204"
+                            data-images='[
+                                "../assets/icons/mks/preview/d41d8cd98f00b204/1.jpg",
+                                "../assets/icons/mks/preview/d41d8cd98f00b204/2.jpg",
+                                "../assets/icons/mks/preview/d41d8cd98f00b204/3.jpg",
+                                "../assets/icons/mks/preview/d41d8cd98f00b204/4.jpg",
+                                "../assets/icons/mks/preview/d41d8cd98f00b204/5.jpg",
+                                "../assets/icons/mks/preview/d41d8cd98f00b204/6.jpg"
+                            ]'>
                         <div class="card-content">
-                            <h3>Название мастер-класса</h3>
-                            <p>Короткое описание того, что будет на мастер-классе</p>
-                            <button class="btn card-btn">Записаться</button>
+                            <h3>Мастер-класс по созданию аромасвечей</h3>
+                            <p>Мастер-класс «Аромасвечи в стекле или кокосе»</p>
+
+                            <p style="display: inline;">от 1500 рублей за 1 человека<br>от 1300 рублей за человека если группа 10 или более человек</p>
+                            
+                            <br>
+                            <br>
+
+                            <p class="mut">Потоковый мастер-класс рассчитывается отдельно</p>
+                            
+                            <button class="btn card-btn modal-trigger" style="margin-bottom: 0.5vw;" data-modal="uuid-d41d8cd98f00b204">Подробнее</button>
+                            <a href="https://t.me/art_Tatiyana" target="_blank">
+                                <button class="btn card-btn">Записаться</button>
+                            </a>
                         </div>
                     </div>
                     
@@ -67,7 +89,6 @@
                         <div class="card-content">
                             <h3>Название мастер-класса</h3>
                             <p>Короткое описание того, что будет на мастер-классе</p>
-                            <button class="btn card-btn" style="margin-bottom: 0.5vw;">Подробнее</button>
                             <button class="btn card-btn">Записаться</button>
                         </div>
                     </div>
@@ -77,6 +98,7 @@
                         <div class="card-content">
                             <h3>Название мастер-класса</h3>
                             <p>Короткое описание того, что будет на мастер-классе</p>
+                            <button class="btn card-btn" style="margin-bottom: 0.5vw;">Подробнее</button>
                             <button class="btn card-btn">Записаться</button>
                         </div>
                     </div>
@@ -149,6 +171,54 @@
                 <button class="btn" id="switchThemeBtn">h</button>
             </section>
         </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Max</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">VK</a>
+                </div>
+                <div class="footer-license">
+                    <p class="modal-trigger txt" data-modal="licenses">Лицензии</p>
+                </div>
+            </div>
+            <br>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <p class="ttl">Заголовок</p>
+                </div>
+            </div>
+            <br>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <p class="txt">ИП xxxx</p>
+                </div>
+            </div>
+            <br>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <p class="txt">ИНН xxxx</p>
+                </div>
+            </div>
+            <br>
+            <div class="footer-content">
+                <div class="footer-license by_with_love">
+                    <a href="https://github.com/iamtowvee" class="by_with_love"><p class="mut">С ❤ iamtowvee</p></a>
+                </div>
+            </div>
+        </footer>
+
+        <div id="uuid-d41d8cd98f00b204" class="modal">
+            <div class="modal-content modal-wide">
+                <span class="modal-close">&times;</span>
+                <h3>Лицензии</h3>
+                <p>Мастер-класс «Аромасвечи в стекле или кокосе»</p>
+                <p>Вы научитесь создавать стильные интерьерные свечи из 100% натурального воска, работать с ароматами и узнаете все о свечеварении.</p>
+                <p>При желании , мастер расскажет о истории возникновения свечей и материалах из которых делают свечи.</p>
+                <button class="btn modal-btn">Действие</button>
+            </div>
+        </div>
 
         <div id="modal-narrow" class="modal">
             <div class="modal-content modal-narrow">
@@ -156,6 +226,19 @@
                 <h3>Узкое окно</h3>
                 <p>Содержимое узкого модального окна. Подходит для небольших сообщений, форм и т.д.</p>
                 <button class="btn modal-btn">Закрыть</button>
+            </div>
+        </div>
+
+        <div id="gallery-modal" class="modal gallery-modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="gallery-container">
+                    <button class="gallery-prev">&lsaquo;</button>
+                    <img class="gallery-main" src="" alt="Просмотр">
+                    <button class="gallery-next">&rsaquo;</button>
+                    <div class="gallery-counter">1 / 1</div>
+                </div>
+                <div class="gallery-thumbnails"></div>
             </div>
         </div>
 
@@ -202,48 +285,9 @@
             </div>
         </div>
 
-        <button class="btn modal-trigger" data-modal="modal-narrow">Узкое окно</button>
-        <button class="btn modal-trigger" data-modal="modal-wide">Широкое окно</button>
-        
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#">Max</a>
-                    <a href="#">Telegram</a>
-                    <a href="#">VK</a>
-                </div>
-                <div class="footer-license">
-                    <p class="modal-trigger txt" data-modal="licenses">Лицензии</p>
-                </div>
-            </div>
-            <br>
-            <div class="footer-content">
-                <div class="footer-links">
-                    <p class="ttl">Заголовок</p>
-                </div>
-            </div>
-            <br>
-            <div class="footer-content">
-                <div class="footer-links">
-                    <p class="txt">ИП xxxx</p>
-                </div>
-            </div>
-            <br>
-            <div class="footer-content">
-                <div class="footer-links">
-                    <p class="txt">ИНН xxxx</p>
-                </div>
-            </div>
-            <br>
-            <div class="footer-content">
-                <div class="footer-license by_with_love">
-                    <a href="https://github.com/iamtowvee" class="by_with_love"><p class="mut">С ❤ iamtowvee</p></a>
-                </div>
-            </div>
-        </footer>
-
         <script src="../assets/js/themes.js"></script>
-        <script src="../assets/js/modal.js"></script>
+        <script src="../assets/js/modal.js" defer></script>
+        <script src="../assets/js/gallery.js"></script>
         <script src="../assets/js/scroll.js"></script>
         <script src="../assets/js/loader.js"></script>
         <script src="../assets/js/footer.js"></script>
