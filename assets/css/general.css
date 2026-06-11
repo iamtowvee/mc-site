@@ -148,7 +148,7 @@ p {
 }
 
 /* ============================
-    BUTTONS
+    BUTTONS & LINKS
    ============================ */
 
 a {
@@ -225,10 +225,100 @@ a:active {
     animation: click 0.3s ease-in-out;
 }
 
+.joins {
+    text-align: center;
+    width: 100%;
+}
+
+.join-btn {
+    display: inline-block;
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.join-btn:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .join-btn {
+        min-width: 150px;
+        max-width: 300px;
+    }
+}
+
 @keyframes click {
     0% { color: var(--text-primary); border-color: var(--text-primary); }
     40% { color: var(--text-light); border-color: var(--text-light); }
     100% { color: var(--text-primary); border-color: var(--text-primary); }
+}
+
+/* ============================
+    LISTS
+   ============================ */
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.2rem;
+}
+
+ul li::before {
+    content: "›";
+    margin-right: 1rem;
+    color: var(--gl-secondary);
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+ol {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: item;
+}
+
+ol li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+    counter-increment: item;
+    line-height: 1.6;
+}
+
+ol li::before {
+    content: counter(item) ".";
+    margin-right: 1rem;
+    color: var(--gl-secondary);
+    flex-shrink: 0;
+    line-height: 1.6;
+    font-size: inherit;
+}
+
+ol ol {
+    counter-reset: subitem;
+    padding-left: 1.5rem;
+}
+
+ol ol li {
+    counter-increment: subitem;
+}
+
+ol ol li::before {
+    content: counter(item) "." counter(subitem) ".";
+}
+
+nav ul li::before {
+    content: "";
 }
 
 /* ============================
@@ -241,6 +331,12 @@ section {
     background: var(--gl-primary);
     padding: 1vw;
     margin-bottom: 1vh;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--gl-secondary);
+    margin: 2rem 0;
 }
 
 /* ============================
