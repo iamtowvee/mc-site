@@ -58,6 +58,30 @@ img, video, iframe, pre, code {
 }
 
 /* ============================
+    COLOURS
+   ============================ */
+
+.green {
+    color: var(--green);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.red {
+    color: var(--red);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+/* ============================
     TEXTS
    ============================ */
 
@@ -333,6 +357,20 @@ section {
     margin-bottom: 1vh;
 }
 
+object {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+block {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
 hr {
     border: none;
     border-top: 1px solid var(--gl-secondary);
@@ -393,9 +431,13 @@ hr {
 }
 
 .card-content h3 {
+    font-family: 'Source Code Pro', Arial, Monospace;
     text-align: left;
-    font-size: 1.3rem;
+    text-align: center;
+    line-height: 0.8;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    height: 4rem;
 }
 
 .card-content p {
@@ -441,6 +483,33 @@ hr {
     .cards-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ============================
+    INFO GRID
+   ============================ */
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.info-table td {
+    padding: 0.3rem 0;
+}
+
+.info-table td:first-child {
+    width: 30px;
+}
+
+.info-table td:nth-child(2) {
+    padding-right: 1rem;
+    color: var(--text-secondary);
+}
+
+.info-table td:last-child {
+    font-weight: bold;
 }
 
 /* ============================
