@@ -38,7 +38,10 @@
                         <li><a href="../about/index.html">О нас</a></li>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#contacts">Контакты</a></li>
-                        <li><button id="switchThemeBtn" class="hid"><i class="fa-solid fa-circle-half-stroke"></i></button></li>
+                        <li class="nav-actions">
+                            <button id="switchThemeBtn" class="hid"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                            <button id="searchBtn" class="hid"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -518,6 +521,17 @@
             </div>
         </div>
 
+        <div id="search-modal" class="modal">
+            <div class="modal-content modal-wide">
+                <span class="modal-close">&times;</span>
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Поиск мастер-классов</h3>
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Введите название или описание..." autocomplete="off">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+        </div>
+
         <div id="gallery-modal" class="modal gallery-modal">
             <div class="modal-content">
                 <span class="modal-close">&times;</span>
@@ -575,6 +589,7 @@
         </div>
 
         <script src="../assets/js/themes.js"></script>
+        <script src="../assets/js/search.js"></script>
         <script src="../assets/js/modal.js" defer></script>
         <script src="../assets/js/fallback.js"></script>
         <script src="../assets/js/gallery.js"></script>
