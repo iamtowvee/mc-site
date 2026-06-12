@@ -393,16 +393,18 @@ hr {
     margin-bottom: 2rem;
 }
 
-
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     width: 100%;
     box-sizing: border-box;
+    align-items: stretch;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     background: var(--gl-primary);
     backdrop-filter: blur(10px);
@@ -412,6 +414,7 @@ hr {
     border: 1px solid var(--gl-secondary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 20;
+    height: 100%;
 }
 
 .card:hover {
@@ -428,16 +431,19 @@ hr {
 
 .card-content {
     padding: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-content h3 {
     font-family: 'Source Code Pro', Arial, Monospace;
-    text-align: left;
     text-align: center;
     line-height: 0.8;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    height: 4rem;
+    min-height: 3.2rem;
+    max-height: 4rem;
 }
 
 .card-content p {
@@ -448,9 +454,24 @@ hr {
     line-height: 1.4;
 }
 
+.card-btns {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .card-btn {
     width: 100%;
     text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -469,13 +490,8 @@ hr {
     
     .card-content h3 {
         font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        min-height: 2.5rem;
+        max-height: 3rem;
     }
 }
 
@@ -510,6 +526,30 @@ hr {
 
 .info-table td:last-child {
     font-weight: bold;
+}
+
+/* ============================
+    PREVIEW
+   ============================ */
+
+.card-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background: var(--gl-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .card-image-placeholder {
+        height: 150px;
+    }
 }
 
 /* ============================
