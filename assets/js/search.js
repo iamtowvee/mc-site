@@ -34,7 +34,7 @@
             const footerText = footer.innerText;
             searchData.push({
                 id: 'footer',
-                title: '📌 Футер (нижняя часть страницы)',
+                title: 'Футер (нижняя часть страницы)',
                 text: footerText,
                 element: footer,
                 type: 'footer'
@@ -47,7 +47,7 @@
             const headerText = header.innerText;
             searchData.push({
                 id: 'header',
-                title: '🏠 Навигация',
+                title: 'Навигация',
                 text: headerText,
                 element: header,
                 type: 'header'
@@ -60,7 +60,7 @@
             if (sectionText.trim()) {
                 searchData.push({
                     id: `section-${idx}`,
-                    title: `📄 ${section.querySelector('h1, h2, h3')?.innerText || 'Секция'}`,
+                    title: `${section.querySelector('h1, h2, h3')?.innerText || 'Секция'}`,
                     text: sectionText,
                     element: section,
                     type: 'section'
@@ -81,7 +81,7 @@
     
     function performSearch(query) {
         if (!query.trim()) {
-            searchResults.innerHTML = '<div class="search-no-results">🔍 Введите запрос для поиска</div>';
+            searchResults.innerHTML = '<div class="search-no-results"><i class="fa-solid fa-magnifying-glass"></i>&nbsp; Введите запрос для поиска</div>';
             return;
         }
         
@@ -91,7 +91,7 @@
         });
         
         if (results.length === 0) {
-            searchResults.innerHTML = '<div class="search-no-results">😔 Ничего не найдено</div>';
+            searchResults.innerHTML = '<div class="search-no-results"><i class="fa-regular fa-face-frown"></i>&nbsp; Ничего не найдено</div>';
             return;
         }
         
@@ -128,7 +128,7 @@
         searchModal.classList.add('active');
         document.body.style.overflow = 'hidden';
         setTimeout(() => searchInput.focus(), 100);
-        searchResults.innerHTML = '<div class="search-no-results">🔍 Введите запрос для поиска</div>';
+        searchResults.innerHTML = '<div class="search-no-results"><i class="fa-solid fa-magnifying-glass"></i>&nbsp; Введите запрос для поиска</div>';
         if (searchInput) searchInput.value = '';
     });
     
